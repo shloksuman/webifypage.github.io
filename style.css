@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Add a black background color to the top navigation */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  z-index: 3;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that should open and close the topnav (icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  height: 110vh;
+}
+
+.hero-content {
+  padding: 0 2rem;
+  text-align: center;
+  z-index: 3;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content button {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #ccc;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(video-sample.mp4);
+  filter: blur(5px);
+  z-index: 2;
+}
+
+
+/* adding parallax */
+
+
+html , body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato" , sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+/* home page */
+
+.pimg1 {
+  background-image: url('media/horror.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg2 {
+  background-image: url('media/actionn.jpg');
+  min-height: 800px;
+ 
+}
+
+.pimg3 {
+  background-image: url('media/james.jpg');
+  min-height: 700px;
+ 
+}
+.pimg4 {
+  background-image: url('media/ice.jpg');
+  min-height: 724px;
+ 
+}
+.pimg5 {
+  background-image: url('media/rom.jpg');
+  min-height: 724px;
+ 
+}
+
+/* action pages */
+
+.pimg6 {
+  background-image: url('media/dark.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg7 {
+  background-image: url('https://images2.alphacoders.com/851/thumb-1920-85182.jpg');
+  min-height: 800px;
+ 
+}
+
+.pimg8 {
+  background-image: url('https://images8.alphacoders.com/107/1079738.jpg');
+  min-height: 700px;
+ 
+}
+.pimg9 {
+  background-image: url('https://images.hdqwalls.com/wallpapers/the-matrix-resurrections-4k-pa.jpg');
+  min-height: 724px;
+ 
+}
+.pimg10 {
+  background-image: url('https://wallpapers.com/images/hd/720p-the-lord-of-the-rings-wallpaper-xwwffdumke2kzuqq.jpg');
+  min-height: 724px;
+ 
+}
+
+/* animated pages */
+
+.pimg11 {
+  background-image: url('https://wallpapercave.com/wp/wp6836707.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg12 {
+  background-image: url('https://wallpapercave.com/wp/wp9909496.jpg');
+  min-height: 800px;
+ 
+}
+
+.pimg13 {
+  background-image: url('https://images6.alphacoders.com/857/857753.jpg');
+  min-height: 700px;
+ 
+}
+.pimg14 {
+  background-image: url('https://wallpapers.com/images/featured/e8u4m9lttr2wlg4q.jpg');
+  min-height: 724px;
+ 
+}
+.pimg15 {
+  background-image: url('https://thedeadtoons.com/wp-content/webpc-passthru.php?src=https://thedeadtoons.com/wp-content/uploads/2022/01/2022-01-16.png&nocache=1');
+  min-height: 724px;
+ 
+}
+
+/* horror pages */
+
+.pimg16 {
+  background-image: url('https://images.hdqwalls.com/wallpapers/the-conjuring-2-movies-4k.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg17 {
+  background-image: url('https://m.media-amazon.com/images/M/MV5BYTYxNTM0ZjktODYzNC00ZDliLTg5YzQtY2YyMzk3ZDMzZjIzXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg');
+  min-height: 800px;
+ 
+}
+
+.pimg18 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/648/13/311/5c1ca76dc24e2-wallpaper-preview.jpg');
+  min-height: 700px;
+ 
+}
+.pimg19 {
+  background-image: url('https://m.media-amazon.com/images/M/MV5BZWM0Mjc0NWItYmFkYi00ZjRhLTgzNTAtYzdhNGQxNWU0ODUzXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg');
+  min-height: 724px;
+ 
+}
+.pimg20 {
+  background-image: url('https://i.ytimg.com/vi/YS_waKrjWIw/maxresdefault.jpg');
+  min-height: 724px;
+ 
+}
+
+/* thrillers pages */
+
+.pimg21 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/239/573/122/brunettes-women-actress-celebrity-festival-bollywood-vidya-balan-saree-movie-stills-kahaani-2560x-entertainment-bollywood-hd-art-wallpaper-preview.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg22 {
+  background-image: url('https://wallpapercave.com/wp/wp3776889.jpg');
+  min-height: 600px;
+ 
+}
+
+.pimg23 {
+  background-image: url('https://media5.bollywoodhungama.in/wp-content/uploads/2016/03/429530373.jpg');
+  min-height: 700px;
+ 
+}
+.pimg24 {
+  background-image: url('https://wallpaperaccess.com/full/2058380.jpg');
+  min-height: 650px;
+ 
+}
+.pimg25 {
+  background-image: url('https://movies.mxdwn.com/wp-content/uploads/2019/03/1_cEQKjCSLFQIu347fo-bMrA.png');
+  min-height: 724px;
+ 
+}
+
+/* romcom pages */
+
+.pimg26 {
+  background-image: url('https://wallpapercave.com/wp/wp7021459.jpg');
+  min-height: 100%;
+ 
+}
+
+.pimg27 {
+  background-image: url('https://wallpapers.com/images/hd/forrest-gump-red-bubba-gump-hat-iuayn6n0akcprmfm.jpg');
+  min-height: 800px;
+ 
+}
+
+.pimg28 {
+  background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFnjnFoCV9taYk9eFWixw3cwbl8hDMcE3pI8kmXm9TSH2U2F34Nj8vEBfPW43NTyaIS6PeXE_xjvdVFSRwhiXECtMs7C4ruW_rJOrUn1EdAyHZUOR099Gi5fII5mmbS6oASweF1zKjiXsjznMyQK2gjmLHasWrB9SOiDnQArKFeo4_Tuv04nVLeHDc/s1600/Sita-Ramam-Movie-Stills-06.jpg');
+  min-height: 700px;
+ 
+}
+.pimg29 {
+  background-image: url('https://wallpapercave.com/wp/wp6574640.jpg');
+  min-height: 724px;
+ 
+}
+.pimg30 {
+  background-image: url('https://wallpapercave.com/wp/wp4650953.jpg');
+  min-height: 724px;
+ 
+}
+
+.pimg1, .pimg2 , .pimg3 , .pimg4 , .pimg5 , .pimg6 ,.pimg7 , .pimg8 , .pimg9 , .pimg10,
+.pimg11, .pimg12 , .pimg13 , .pimg14 , .pimg15 , .pimg16 ,.pimg17 , .pimg18 , .pimg19 , .pimg20,
+.pimg21, .pimg22 , .pimg23 , .pimg24 , .pimg25 , .pimg26 ,.pimg27 , .pimg28 , .pimg29 , .pimg30    {
+  /*given below 4 properties are important*/
+  position: relative;
+  background-position: center;
+  background-size: cover; /* covers full screen */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*GIVES PARALLAX EFFECT*/
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.textbg {
+  background: transparent;
+  color: aqua;
+}
+
+.section {
+  padding: 50px 80px;
+  text-align: center;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+
+/* footer  */
+
+footer {
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  color: #ddd;
+}
+
+
+/* adding slider */
+
+.slider {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.slide {
+  padding-top: 70px;
+  border: 1px transparent;
+  width: 25%;
+  float: left;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide:hover {
+  transform: scale(1.3);
+}
+
+img {
+  width: 70%;
+  height: auto;
+}
+
+/* .cardd {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  float: left;
+  margin: 10px;
+}
+
+.cardd:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  padding: 20px;
+}
+
+h3 {
+  padding: 10px;
+} */
+
+.stars {
+  display: flex;
+  justify-content: center;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  background-image: url("media/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: shine 2s ease-in-out infinite;
+}
+
+
+/* Animation for shining effect */
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.review {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  margin-top: 6px;
+}
+
+.section-photos-container {
+  /* made grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(400px , 1fr));
+  gap: 20px;
+  margin-left: 120px; 
+}
+
+.photos-control {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.carddd-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carddd {
+   width: 300px; 
+  margin: 20px;
+}
+
+.carddd img {
+  width: 40%;
+}
+
+.extras {
+  text-align: center;
+  margin: 0 10px;
+}
